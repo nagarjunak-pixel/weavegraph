@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+coverage.xml
+dist/
+build/
+*.egg-info/
+ui/node_modules/
+ui/dist/
+.DS_Store

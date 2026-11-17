@@ -1,0 +1,56 @@
+name: WeaveGraph CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-python-cpp20-and-ui:
+    name: Python 3.13 + C++20 Graph Kernels + TypeScript UI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure C++20 compiler is present
+        run: g++ --version
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.13
+        run: uv python install 3.13
+
+      - name: Sync dependencies from lockfile
+        run: uv sync --python 3.13 --frozen --all-extras
+
+      - name: Verify formatting and lint rules (Ruff)
+        run: |
+          uv run ruff format --check src tests
+          uv run ruff check src tests
+
+      - name: Verify strict static types (Mypy)
+        run: uv run mypy src tests
+
+      - name: Run unit, Hypothesis property & coverage suite (>=95% required)
+        run: uv run pytest --cov=weavegraph --cov-report=term-missing --cov-fail-under=95
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Build WeaveGraph Workbench UI
+        working-directory: ui
+        run: |
+          npm ci
+          npm run build
