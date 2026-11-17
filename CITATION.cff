@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or reference this software architecture, please cite it as below."
+authors:
+  - family-names: "Kamireddy"
+    given-names: "Nagarjuna Reddy"
+    alias: "Nagarjuna Kamireddy"
+    website: "https://nagarjunak-pixel.github.io/"
+title: "WeaveGraph — Parallel Multi-Agent Tarjan SCC / Min-Cut Worktree Partitioning & 3-Way AST Merge Verifier"
+version: 1.0.0
+date-released: 2026-11-18
+url: "https://nagarjunak-pixel.github.io/github-projects-atlas.html"
+repository-code: "https://github.com/nagarjunak-pixel/weavegraph"
+references:
+  - type: web
+    title: "Nagarjuna Kamireddy — Official LinkedIn Profile & Autonomous SAP Newsletter"
+    url: "https://www.linkedin.com/in/nagarjuna-kamireddy/"
+license: MIT
