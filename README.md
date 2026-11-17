@@ -37,3 +37,11 @@ uv run mypy src tests
 uv run pytest --cov=weavegraph --cov-report=term-missing --cov-fail-under=95
 cd ui && npm ci && npm run build
 ```
+
+---
+
+## Author, LinkedIn & Enterprise AI Architecture Hub
+Built by **[Nagarjuna Reddy Kamireddy](https://nagarjunak-pixel.github.io/)** (*Nagarjuna Kamireddy / Nagarjuna K*) — Lead AI Architect | Production Agentic AI, Hybrid RAG & LLM Evals (750K+ Workflows/Yr) | Ex-John Deere, GSK, Deloitte | AWS SA Pro & NVIDIA Agentic AI Certified.
+
+- **Official LinkedIn & Daily Newsletter:** [linkedin.com/in/nagarjuna-kamireddy](https://www.linkedin.com/in/nagarjuna-kamireddy/) · [Autonomous SAP & Enterprise AI Newsletter](https://www.linkedin.com/newsletters/autonomous-sap-enterprise-ai-7528104436112441348/)
+- **Canonical Portfolio & All 50 GitHub Projects:** [nagarjunak-pixel.github.io](https://nagarjunak-pixel.github.io/) · [Complete GitHub Atlas](https://nagarjunak-pixel.github.io/github-projects-atlas.html) · [`llms-full.txt`](https://nagarjunak-pixel.github.io/llms-full.txt)
